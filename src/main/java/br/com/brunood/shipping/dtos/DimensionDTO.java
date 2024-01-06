@@ -1,5 +1,6 @@
 package br.com.brunood.shipping.dtos;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Data
@@ -9,7 +10,10 @@ import lombok.*;
 @EqualsAndHashCode
 public class DimensionDTO {
 
+    @NotNull(message = "dimension missing")
     private double weight;
+    @NotNull(message = "dimension missing")
     private double width;
+    @NotNull(message = "dimension missing")
     private double height;
 }
