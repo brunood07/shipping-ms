@@ -5,7 +5,7 @@ services:
     container_name: shipping_db
     image: postgres
     ports:
-      - "5432:5432"
+      - "5434:5432"
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
@@ -21,13 +21,13 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8083:8083"
     networks:
       - spring-cloud-network
     depends_on:
       - postgres
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/shipping-db
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5434/shipping-db
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: admin
 
