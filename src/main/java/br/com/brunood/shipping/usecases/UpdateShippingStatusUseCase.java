@@ -11,7 +11,7 @@ public class UpdateShippingStatusUseCase {
     @Autowired
     private OrdersMsClient ordersMsClient;
 
-    public void updateShippingStatus(Long orderId, ShippingStatus status) {
+    public void execute(Long orderId, ShippingStatus status) {
         this.ordersMsClient.updateShippingStatus(orderId, status);
     }
 }

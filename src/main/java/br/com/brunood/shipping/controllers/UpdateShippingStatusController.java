@@ -15,7 +15,7 @@ public class UpdateShippingStatusController {
 
     @PutMapping("/update/{orderId}")
     public ResponseEntity<Object> updateShippingStatus(@PathVariable(name = "orderId") Long orderId, @RequestParam(name = "status") ShippingStatus status) {
-        this.updateShippingStatusUseCase.updateShippingStatus(orderId, status);
+        this.updateShippingStatusUseCase.execute(orderId, status);
         return ResponseEntity.ok().body("updated");
     }
 

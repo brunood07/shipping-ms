@@ -10,4 +10,4 @@ spring:
 
 rest:
   client:
-    payments:
+    orders:
