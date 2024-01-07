@@ -1,21 +1,6 @@
 spring:
   application:
     name: 'shipping-ms'
-  flyway:
-    enabled: true
-  datasource:
-    url: jdbc:postgresql://localhost:5434/shipping-db?user=admin&password=admin&createDatabaseIfNotExist=true
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        globally_quoted_identifiers: 'true'
-        format_sql: 'true'
-        default_schema: ecomm_shipping
-    show-sql: 'false'
-    database-platform: 'org.hibernate.dialect.PostgreSQLDialect'
-    hibernate:
-      ddl-auto: update
 
 server:
   port: 8082
