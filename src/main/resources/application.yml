@@ -8,4 +8,4 @@ server:
 
 rest:
   client:
-    orders: http://localhost:8080
+    orders: http://order:8080
